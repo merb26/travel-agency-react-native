@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
   },
 
   btn: {
+    fontFamily: "Raleway-Regular",
     backgroundColor: colors.secondary,
     padding: 10,
     borderRadius: 10,

@@ -3,6 +3,7 @@ import colors from "../../styles/themes";
 
 const styles = StyleSheet.create({
   button: {
+    fontFamily: "Raleway-Regular",
     padding: 5,
   },
 });

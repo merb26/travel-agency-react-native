@@ -5,7 +5,7 @@ import styles from "./styles";
 const ButtonCustom = () => {
   return (
     <View style={styles.container}>
-      <Text>Buscar</Text>
+      <Text style={styles.title}>Buscar</Text>
     </View>
   );
 };

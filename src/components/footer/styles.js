@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: colors.fourth,
   },
+
+  title: {
+    fontFamily: "Raleway-Regular",
+  },
 });
 
 export default styles;

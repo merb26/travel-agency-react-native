@@ -8,12 +8,12 @@ const Footer = ({ onPressMenu, onPressStart }) => {
     <View style={styles.container}>
       <View>
         <TouchableOpacity onPress={onPressStart}>
-          <Text>Inicio</Text>
+          <Text style={styles.title}>Inicio</Text>
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity onPress={onPressMenu}>
-          <Text>Menú</Text>
+          <Text style={styles.title}>Menú</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: colors.secondary,
   },
+
+  title: {
+    fontFamily: "Raleway-Regular",
+  },
 });
 
 export default styles;

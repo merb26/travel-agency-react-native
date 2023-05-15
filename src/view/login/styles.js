@@ -17,11 +17,13 @@ const styles = StyleSheet.create({
   },
 
   txtInputLogin: {
+    fontFamily: "Raleway-Regular",
     marginBottom: 15,
     padding: 10,
   },
 
   btn: {
+    fontFamily: "Raleway-Regular",
     textAlign: "center",
     backgroundColor: colors.secondary,
     padding: 15,
