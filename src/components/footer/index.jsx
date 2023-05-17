@@ -1,5 +1,6 @@
-import { TouchableOpacity, View } from "react-native";
 import styles from "./styles";
+
+import { TouchableOpacity, View } from "react-native";
 
 const { Text } = require("react-native");
 

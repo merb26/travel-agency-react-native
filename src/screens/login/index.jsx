@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
+
 import styles from "./styles";
 
 const dataAdmin = {
@@ -20,9 +21,8 @@ const Login = ({ onPressStart }) => {
   };
 
   const handleSubmit = () => {
-    if (email === dataAdmin.email && password === dataAdmin.password) {
+    if (email === dataAdmin.email && password === dataAdmin.password)
       onPressStart();
-    }
   };
 
   return (

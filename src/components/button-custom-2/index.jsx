@@ -1,4 +1,5 @@
 import { Text } from "react-native";
+
 import styles from "./styles";
 
 const ButtonCustom2 = ({ onPress, title, style }) => {

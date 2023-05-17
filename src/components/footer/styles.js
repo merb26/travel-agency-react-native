@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
-import colors from "../../styles/themes";
+
+import { colors } from "../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     alignContent: "flex-end",
     marginTop: "auto",
     padding: 20,
-    backgroundColor: colors.fourth,
+    backgroundColor: colors.third,
   },
 
   title: {

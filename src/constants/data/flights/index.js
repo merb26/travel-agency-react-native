@@ -1,4 +1,4 @@
-const data = [
+export const flights = [
   {
     id: 1,
     origen: "Madrid",
@@ -80,5 +80,3 @@ const data = [
     tipo: "ida",
   },
 ];
-
-export default data;

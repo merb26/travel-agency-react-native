@@ -1,7 +1,7 @@
-import { View } from "react-native";
-import { TextInput } from "react-native";
-import ButtonCustom from "../button-custom";
+import { TextInput, View } from "react-native";
+
 import styles from "./styles";
+import ButtonCustom from "../button-custom";
 
 const InputTextAndBtn = ({ placeHolderText, buttonText }) => {
   return (

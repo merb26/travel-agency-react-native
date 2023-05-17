@@ -1,18 +1,19 @@
-import { useState } from "react";
-import Start from "./view/start";
-import Menu from "./view/menu/index";
-import Footer from "./components/footer";
-import Login from "./view/login";
-import styles from "./styles";
-import { ActivityIndicator, View } from "react-native";
-import colors from "./styles/themes";
 import { useFonts } from "expo-font";
+import { useState } from "react";
+import { ActivityIndicator, View } from "react-native";
+
+import { Footer } from "./components";
+import { colors } from "./constants";
+import { Login, Menu, Start } from "./screens";
+import styles from "./styles";
 
 export default function App() {
   const [viewSelected, setViewSelected] = useState("login");
 
   const handlePressMenu = () => setViewSelected("menu");
+
   const handlePressStart = () => setViewSelected("start");
+
   const handlePressLogOut = () => setViewSelected("login");
 
   const [loaded] = useFonts({
@@ -48,13 +49,10 @@ export default function App() {
     switch (viewSelected) {
       case "start":
         return <Start />;
-        break;
       case "login":
         return <Login onPressStart={handlePressStart} />;
-        break;
       case "menu":
         return <Menu onPressLogOut={handlePressLogOut} />;
-        break;
     }
   };
 
