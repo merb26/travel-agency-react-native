@@ -1,10 +1,8 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
+  boxCard: {
     marginBottom: 10,
-    marginHorizontal: 10,
-    paddingVertical: 10,
   },
 });
 

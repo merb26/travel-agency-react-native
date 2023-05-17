@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
 
+import { colors } from "../../constants";
+
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 10,
-    marginHorizontal: 10,
-    paddingVertical: 10,
+    flex: 1,
+    backgroundColor: colors.primary
   },
 });
 

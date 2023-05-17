@@ -1,21 +1,13 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 
 import styles from "./styles";
 
-const ListItems = ({ data }) => {
+const ListItems = ({ data, Item }) => {
   return (
     <View style={styles.container}>
       <FlatList
         data={data}
-        renderItem={({ item }) => (
-          <View style={styles.boxCard}>
-            <Text>Origen: {item.origen}</Text>
-            <Text>Destino: {item.destino}</Text>
-            <Text>Fecha: {item.fecha}</Text>
-            <Text>Horario: {item.horario} hrs</Text>
-            <Text>Tipo: {item.tipo}</Text>
-          </View>
-        )}
+        renderItem={({ item }) => <Item item={item} />}
         keyExtractor={(item) => item.id}
       />
     </View>

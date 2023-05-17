@@ -6,6 +6,7 @@ import { Footer } from "./components";
 import { colors } from "./constants";
 import { Login, Menu, Start } from "./screens";
 import styles from "./styles";
+import Navigation from "./navigation";
 
 export default function App() {
   const [viewSelected, setViewSelected] = useState("login");
@@ -48,7 +49,7 @@ export default function App() {
   const views = () => {
     switch (viewSelected) {
       case "start":
-        return <Start />;
+        return <Navigation />;
       case "login":
         return <Login onPressStart={handlePressStart} />;
       case "menu":
