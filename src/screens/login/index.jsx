@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 
 import styles from "./styles";
 
@@ -21,8 +21,24 @@ const Login = ({ onPressStart }) => {
   };
 
   const handleSubmit = () => {
-    if (email === dataAdmin.email && password === dataAdmin.password)
-      onPressStart();
+    const customAlert = [{ text: "Aceptar", style: "cancel" }];
+
+    if (email === "") {
+      Alert.alert("Error", "Debe ingresar email.", customAlert);
+      return;
+    }
+
+    if (password === "") {
+      Alert.alert("Error", "Debe ingresar contraseña.", customAlert);
+      return;
+    }
+
+    if (email !== dataAdmin.email && password !== dataAdmin.password) {
+      Alert.alert("Error", "Datos incorrectos, intente de nuevo.", customAlert);
+      return;
+    }
+
+    onPressStart();
   };
 
   return (
@@ -32,15 +48,16 @@ const Login = ({ onPressStart }) => {
         placeholder="Correo electrónico"
         value={email}
         onChangeText={handleEmailChange}
-        style={styles.txtInputLogin}
+        style={styles.txtInputEmail}
       />
       <TextInput
         placeholder="Contraseña"
         value={password}
         onChangeText={handlePasswordChange}
         secureTextEntry
-        style={styles.txtInputLogin}
+        style={styles.txtInputPassword}
       />
+      <Text style={styles.forget}>¿Olvidaste la contraseña?</Text>
       <TouchableOpacity onPress={handleSubmit}>
         <Text style={styles.btn}>Enviar</Text>
       </TouchableOpacity>

@@ -17,10 +17,28 @@ const styles = StyleSheet.create({
     color: colors.secondary,
   },
 
-  txtInputLogin: {
+  txtInputEmail: {
     fontFamily: "Raleway-Regular",
-    marginBottom: 15,
     padding: 10,
+    marginBottom: 15,
+    borderWidth: 1,
+    borderRadius: 20,
+    borderColor: "#6CA6C1",
+  },
+
+  txtInputPassword: {
+    fontFamily: "Raleway-Regular",
+    padding: 10,
+    borderWidth: 1,
+    borderRadius: 20,
+    borderColor: "#6CA6C1",
+  },
+
+  forget: {
+    textAlign: "center",
+    marginVertical: 15,
+    fontSize: 12,
+    color: "#6CA6C1",
   },
 
   btn: {
