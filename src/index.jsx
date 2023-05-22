@@ -44,7 +44,6 @@ export default function App() {
   }
 
   const views = () => {
-
     const views = {
       start: <Navigation onPressLogOut={handlePressLogOut} />,
       login: <Login onPressStart={handlePressStart} />,

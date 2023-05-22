@@ -1,14 +1,15 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import styles from "./styles";
 
 const Menu = ({ onPressLogOut }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={onPressLogOut}>
         <Text style={styles.btn}>Cerrar sesión</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 
