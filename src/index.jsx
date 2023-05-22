@@ -46,23 +46,15 @@ export default function App() {
     );
   }
 
+  // console.warn(viewSelected);
   const views = () => {
     switch (viewSelected) {
       case "start":
-        return <Navigation />;
+        return <Navigation onPressLogOut={handlePressLogOut} />;
       case "login":
         return <Login onPressStart={handlePressStart} />;
-      case "menu":
-        return <Menu onPressLogOut={handlePressLogOut} />;
     }
   };
 
-  return (
-    <View style={styles.container}>
-      {views()}
-      {viewSelected !== "login" && (
-        <Footer onPressMenu={handlePressMenu} onPressStart={handlePressStart} />
-      )}
-    </View>
-  );
+  return <View style={styles.container}>{views()}</View>;
 }

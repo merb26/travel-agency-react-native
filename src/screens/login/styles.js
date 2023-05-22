@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { colors } from "../../constants";
+import { colors, fonts } from "../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -12,37 +12,37 @@ const styles = StyleSheet.create({
   title: {
     textAlign: "center",
     fontSize: 25,
-    fontFamily: "Raleway-Black",
+    fontFamily: fonts.primary,
     marginBottom: 15,
     color: colors.secondary,
   },
 
   txtInputEmail: {
-    fontFamily: "Raleway-Regular",
+    fontFamily: fonts.primary,
     padding: 10,
     marginBottom: 15,
     borderWidth: 1,
     borderRadius: 20,
-    borderColor: "#6CA6C1",
+    borderColor: colors.third,
   },
 
   txtInputPassword: {
-    fontFamily: "Raleway-Regular",
+    fontFamily: fonts.primary,
     padding: 10,
     borderWidth: 1,
     borderRadius: 20,
-    borderColor: "#6CA6C1",
+    borderColor: colors.third,
   },
 
   forget: {
     textAlign: "center",
     marginVertical: 15,
     fontSize: 12,
-    color: "#6CA6C1",
+    color: colors.third,
   },
 
   btn: {
-    fontFamily: "Raleway-Regular",
+    fontFamily: fonts.primary,
     textAlign: "center",
     backgroundColor: colors.secondary,
     padding: 15,
