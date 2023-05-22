@@ -4,3 +4,4 @@ export { default as ListItems } from "./list-items";
 export { default as ItemFlights } from "./item-flights";
 export { default as ItemLodging } from "./item-lodging";
 export { default as ItemPackages } from "./item-packages";
+export { default as Input } from "./input";

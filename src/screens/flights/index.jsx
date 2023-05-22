@@ -2,7 +2,8 @@ import { useState } from "react";
 import { View } from "react-native";
 
 import styles from "./styles";
-import { InputTextAndBtn, ItemFlights, ListItems } from "../../components";
+import { Input, ItemFlights, ListItems } from "../../components";
+import ButtonCustom from "../../components/button-custom";
 import { flights } from "../../database";
 
 const Flights = () => {
@@ -10,10 +11,17 @@ const Flights = () => {
 
   return (
     <View style={styles.container}>
-      <InputTextAndBtn
-        buttonText="Buscar"
-        placeHolderText="Ingrese la ubicación"
-      />
+      <View style={styles.boxInputs}>
+        <Input style={styles.input} placeHolderText="Ingrese el origen" />
+        <Input style={styles.input} placeHolderText="Ingrese el destino" />
+      </View>
+      <View style={styles.boxButton}>
+        <ButtonCustom
+          style={styles.buttonCustom}
+          onPressButton={() => console.warn("hiciste clik")}
+          title="Buscar"
+        />
+      </View>
       <ListItems data={dataVuelos} Item={ItemFlights} />
     </View>
   );

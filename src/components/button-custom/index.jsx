@@ -1,12 +1,14 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 import styles from "./styles";
 
-const ButtonCustom = () => {
+const ButtonCustom = ({ title, onPressButton, style }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Buscar</Text>
-    </View>
+    <TouchableOpacity onPress={onPressButton}>
+      <View style={[styles.container, style]}>
+        <Text style={styles.title}>{title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 

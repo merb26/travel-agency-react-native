@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import TabsNavigation from "./tabs";
 
-const Navigation = ({onPressLogOut}) => {
+const Navigation = ({ onPressLogOut }) => {
   return (
     <NavigationContainer>
       <TabsNavigation onPressLogOut={onPressLogOut} />
