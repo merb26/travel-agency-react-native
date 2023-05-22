@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.primary,
-    paddingTop: 35,
+    // paddingTop: 35,
     paddingHorizontal: 10,
     gap: 10,
   },

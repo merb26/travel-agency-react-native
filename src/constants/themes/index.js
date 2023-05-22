@@ -7,6 +7,6 @@ export const colors = {
 };
 
 export const fonts = {
-  primary: "Raleway-Regular",
-  secondary: "Raleway-Light",
+  textRegular: "Raleway-Regular",
+  textLight: "Raleway-Light",
 };

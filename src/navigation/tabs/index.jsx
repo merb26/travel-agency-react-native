@@ -1,7 +1,7 @@
 import { Fontisto, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import MainNavigation from "./../main/index";
+import MainNavigation from "./../start/index";
 import { colors, fonts } from "../../constants";
 import { Menu } from "../../screens";
 

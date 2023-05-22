@@ -2,16 +2,13 @@ import { useFonts } from "expo-font";
 import { useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 
-import { Footer } from "./components";
 import { colors } from "./constants";
-import { Login, Menu, Start } from "./screens";
-import styles from "./styles";
 import Navigation from "./navigation";
+import { Login } from "./screens";
+import styles from "./styles";
 
 export default function App() {
   const [viewSelected, setViewSelected] = useState("login");
-
-  const handlePressMenu = () => setViewSelected("menu");
 
   const handlePressStart = () => setViewSelected("start");
 
@@ -46,14 +43,14 @@ export default function App() {
     );
   }
 
-  // console.warn(viewSelected);
   const views = () => {
-    switch (viewSelected) {
-      case "start":
-        return <Navigation onPressLogOut={handlePressLogOut} />;
-      case "login":
-        return <Login onPressStart={handlePressStart} />;
-    }
+
+    const views = {
+      start: <Navigation onPressLogOut={handlePressLogOut} />,
+      login: <Login onPressStart={handlePressStart} />,
+    };
+
+    return views[viewSelected];
   };
 
   return <View style={styles.container}>{views()}</View>;
