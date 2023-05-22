@@ -5,3 +5,4 @@ export { default as Login } from "./login";
 export { default as Categories } from "./categories";
 export { default as Lodging } from "./lodging";
 export { default as Packages } from "./packages";
+export { default as Welcome } from "./welcome";
