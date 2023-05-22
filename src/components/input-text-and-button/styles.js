@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
+    margin: 10,
   },
   inputText: {
     fontFamily: "Raleway-Regular",

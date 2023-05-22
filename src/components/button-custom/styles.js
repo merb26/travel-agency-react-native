@@ -5,8 +5,8 @@ import { colors } from "../../constants";
 const styles = StyleSheet.create({
   container: {
     marginLeft: 15,
-    padding: 15,
-    borderRadius: 20,
+    padding: 10,
+    borderRadius: 10,
     backgroundColor: colors.secondary,
   },
 

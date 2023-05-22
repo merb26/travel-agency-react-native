@@ -2,7 +2,7 @@ import { useState } from "react";
 import { View } from "react-native";
 
 import styles from "./styles";
-import { ItemFlights, ListItems } from "../../components";
+import { InputTextAndBtn, ItemFlights, ListItems } from "../../components";
 import { flights } from "../../database";
 
 const Flights = () => {
@@ -10,6 +10,10 @@ const Flights = () => {
 
   return (
     <View style={styles.container}>
+      <InputTextAndBtn
+        buttonText="Buscar"
+        placeHolderText="Ingrese la ubicación"
+      />
       <ListItems data={dataVuelos} Item={ItemFlights} />
     </View>
   );
