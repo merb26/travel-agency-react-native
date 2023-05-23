@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { View } from "react-native";
+import { useSelector } from "react-redux";
 
 import styles from "./styles";
 import { Input, ItemFlights, ListItems } from "../../components";
 import ButtonCustom from "../../components/button-custom";
-import { flights } from "../../database";
 
 const Flights = () => {
-  const [dataVuelos, setDataVuelos] = useState(flights);
-  const [listFlights, setListFlights] = useState(flights)
+  const flightsData = useSelector((state) => state.flights.data);
+
+  const [listFlights, setListFlights] = useState(flightsData);
   const [valueOrigin, setValueOrigin] = useState("");
 
   const handlePressSearch = () => {
-    const search = dataVuelos.filter((item) => {
-      return item.origen === valueOrigin;
+    const search = flightsData.filter((item) => {
+      return item.origen.pais === valueOrigin;
     });
 
-    setListFlights(search)
+    setListFlights(search);
   };
 
   return (

@@ -1,10 +1,12 @@
 import { useFonts } from "expo-font";
 import { useState } from "react";
 import { ActivityIndicator, View } from "react-native";
+import { Provider } from "react-redux";
 
 import { colors } from "./constants";
 import Navigation from "./navigation";
 import { Login } from "./screens";
+import store from "./store";
 import styles from "./styles";
 
 export default function App() {
@@ -52,5 +54,9 @@ export default function App() {
     return views[viewSelected];
   };
 
-  return <View style={styles.container}>{views()}</View>;
+  return (
+    <Provider store={store}>
+      <View style={styles.container}>{views()}</View>
+    </Provider>
+  );
 }

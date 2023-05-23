@@ -5,7 +5,7 @@ import styles from "./styles";
 const ItemFlights = ({ item }) => (
   <View style={styles.boxCard}>
     <View style={styles.boxOriginDestination}>
-      <Text style={styles.origen}>Origen: {item.origen.pais}</Text>
+      <Text style={styles.origen}>Origen: {item.origen.pais} </Text>
       <Text style={styles.destino}>Destino: {item.destino.pais}</Text>
     </View>
     <Text style={styles.fecha}>Fecha: {item.fecha.salida}</Text>
