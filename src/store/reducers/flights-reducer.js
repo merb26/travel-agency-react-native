@@ -5,8 +5,6 @@ const initialState = {
   select: null,
 };
 
-const FlightsReducer = (state = initialState, action) => {
-  return state;
-};
+const flightsReducer = (state = initialState, action) => state;
 
-export default FlightsReducer;
+export default flightsReducer;

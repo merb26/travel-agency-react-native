@@ -38,6 +38,7 @@ const TabsNavigation = ({ onPressLogOut }) => (
     />
     <Stack.Screen
       name="Menu"
+      component={Menu}
       options={{
         tabBarLabel: "Menú",
         tabBarIcon: ({ focused, color, size }) => (
@@ -48,9 +49,7 @@ const TabsNavigation = ({ onPressLogOut }) => (
           />
         ),
       }}
-    >
-      {() => <Menu onPressLogOut={onPressLogOut} />}
-    </Stack.Screen>
+    />
   </Stack.Navigator>
 );
 export default TabsNavigation;

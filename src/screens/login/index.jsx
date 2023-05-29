@@ -1,24 +1,15 @@
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import { useDispatch } from "react-redux";
 
 import styles from "./styles";
+import { authAction } from "../../store/actions";
 
-const dataAdmin = {
-  email: "admin@gmail.com",
-  password: "admin",
-};
+const Login = () => {
+  const dispatch = useDispatch();
 
-const Login = ({ onPressStart }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleEmailChange = (text) => {
-    setEmail(text);
-  };
-
-  const handlePasswordChange = (text) => {
-    setPassword(text);
-  };
 
   const handleSubmit = () => {
     const customAlert = [{ text: "Aceptar", style: "cancel" }];
@@ -33,12 +24,7 @@ const Login = ({ onPressStart }) => {
       return;
     }
 
-    if (email !== dataAdmin.email && password !== dataAdmin.password) {
-      Alert.alert("Error", "Datos incorrectos, intente de nuevo.", customAlert);
-      return;
-    }
-
-    onPressStart();
+    dispatch(authAction({ email, password }));
   };
 
   return (
@@ -46,16 +32,16 @@ const Login = ({ onPressStart }) => {
       <Text style={styles.title}>Inicio de sesión</Text>
       <TextInput
         placeholder="Correo electrónico"
-        value={email}
-        onChangeText={handleEmailChange}
         style={styles.txtInputEmail}
+        value={email}
+        onChangeText={(text) => setEmail(text)}
       />
       <TextInput
         placeholder="Contraseña"
-        value={password}
-        onChangeText={handlePasswordChange}
         secureTextEntry
         style={styles.txtInputPassword}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
       />
       <Text style={styles.forget}>¿Olvidaste la contraseña?</Text>
       <TouchableOpacity onPress={handleSubmit}>

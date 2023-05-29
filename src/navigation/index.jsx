@@ -1,11 +1,22 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { Alert } from "react-native";
+import { useSelector } from "react-redux";
 
+import Login from "./../screens/login/index";
 import TabsNavigation from "./tabs";
 
-const Navigation = ({ onPressLogOut }) => {
+const Navigation = () => {
+  const { isAuth, isClick } = useSelector((state) => state.auth);
+
+  if (isClick && !isAuth) {
+    Alert.alert("Error", "Datos incorrectos, intente de nuevo.", [
+      { text: "Aceptar", style: "cancel" },
+    ]);
+  }
+
   return (
     <NavigationContainer>
-      <TabsNavigation onPressLogOut={onPressLogOut} />
+      {isAuth ? <TabsNavigation /> : <Login />}
     </NavigationContainer>
   );
 };

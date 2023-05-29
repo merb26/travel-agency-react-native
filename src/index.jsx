@@ -1,21 +1,13 @@
 import { useFonts } from "expo-font";
-import { useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { Provider } from "react-redux";
 
 import { colors } from "./constants";
 import Navigation from "./navigation";
-import { Login } from "./screens";
 import store from "./store";
 import styles from "./styles";
 
 export default function App() {
-  const [viewSelected, setViewSelected] = useState("login");
-
-  const handlePressStart = () => setViewSelected("start");
-
-  const handlePressLogOut = () => setViewSelected("login");
-
   const [loaded] = useFonts({
     "Raleway-Black": require("../assets/fonts/Raleway-Black.ttf"),
     "Raleway-BlackItalic": require("../assets/fonts/Raleway-BlackItalic.ttf"),
@@ -45,18 +37,9 @@ export default function App() {
     );
   }
 
-  const views = () => {
-    const views = {
-      start: <Navigation onPressLogOut={handlePressLogOut} />,
-      login: <Login onPressStart={handlePressStart} />,
-    };
-
-    return views[viewSelected];
-  };
-
   return (
     <Provider store={store}>
-      <View style={styles.container}>{views()}</View>
+      <Navigation />
     </Provider>
   );
 }
