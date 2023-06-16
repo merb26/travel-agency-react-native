@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import MainNavigation from "./../start/index";
 import { colors, fonts } from "../../constants";
-import { Menu } from "../../screens";
+import MenuNavigation from "../menu";
 
 const Stack = createBottomTabNavigator();
 
@@ -37,8 +37,8 @@ const TabsNavigation = ({ onPressLogOut }) => (
       }}
     />
     <Stack.Screen
-      name="Menu"
-      component={Menu}
+      name="MenuNavigation"
+      component={MenuNavigation}
       options={{
         tabBarLabel: "Menú",
         tabBarIcon: ({ focused, color, size }) => (

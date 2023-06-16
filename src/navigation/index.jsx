@@ -16,7 +16,7 @@ const Navigation = () => {
 
   return (
     <NavigationContainer>
-      {isAuth ? <TabsNavigation /> : <Login />}
+      {true ? <TabsNavigation /> : <Login />}
     </NavigationContainer>
   );
 };
